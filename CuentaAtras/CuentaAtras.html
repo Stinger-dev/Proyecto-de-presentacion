@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta Atrás</title>
+
+    <style type="text/css">
+        body{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1d2a35;
+            color: #f1f1f1;
+
+        }
+       
+        .boton{
+            border-radius: 3px;
+            background-color: #04AA6D;
+            color: #f1f1f1;
+            border: 0;
+            height: 35px;
+            width: 80px;
+            margin-top: 20px;
+        }
+        .boton:hover{
+            background-color: #088f5d;
+        }
+
+        
+        input{
+            text-align: center;
+        }
+        input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+            -webkit-appearance: none; 
+            /* Para  quitar las flechas del tipo number */
+        }
+
+        #horas{
+            width: 20px;
+        }
+        #minutos, #segundos{
+            width: 30px;
+        }
+        .numeros {
+            color: #04AA6D;
+            font-size: 10dvw;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        
+        .botonMenos{
+            background:url(Assets/flechaAbajo.png) ;
+            background-size: cover;
+        }
+
+        .botonMas{
+            background:url(Assets/flechaArriba.png) ;
+            background-size: cover;
+        }
+
+        .botonMenos, .botonMas{
+            width: 30px;
+            height: 30px;
+            border: none;
+            margin: 0px;
+        }
+
+        .botonMenos:active, .botonMas:active{
+            margin: 0px;
+        }
+
+        .oculto{
+            display: none;
+        }
+
+        table{
+            table-layout: fixed;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+
+        }
+        
+
+        
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Cuenta atrás</h2>
+        <p>Introduzca el tiempo</p>
+    </div>
+    <div id="contador" >
+        <table >
+            <tr id="botonesMas" >
+                <td><input type="button" class="botonMas"  id="mashoras"></td> 
+                <td></td>
+                <td><input type="button" class="botonMas"  id="masminutos"></td>
+                <td></td>
+                <td><input type="button" class="botonMas"  id="massegundos"></td>                
+            </tr>
+            <tr>
+                <td class="numeros" id="marcadorHoras">0</td> 
+                <td class="numeros">:</td>
+                <td class="numeros" id="marcadorMinutos">0</td>
+                <td class="numeros">:</td>
+                <td class="numeros" id="marcadorSegundos">0</td>                
+            </tr> 
+            <tr id="botonesMenos">
+                <td><input type="button" class="botonMenos"  id="menoshoras"></td>
+                <td></td>
+                <td><input type="button" class="botonMenos"  id="menosminutos"></td>
+                <td></td>
+                <td><input type="button" class="botonMenos"  id="menossegundos"></td>                
+            </tr>
+        </table>
+        <input type="button" class="boton" id="empezar" value="Empezar">
+        <input type="button" class="boton oculto" id="parar" value="Parar">
+        <input type="button" class="boton" id="reiniciar" value="Reiniciar">
+
+
+
+    </div>
+
+    <audio src="Assets/alarm-clock-going-off.mp3"  id="alarma"></audio>
+
+    <script src="CuentaAtras.js"></script>
+
+</body>
+
+</html>

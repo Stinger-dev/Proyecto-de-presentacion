@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contador</title>
+
+    <style type="text/css">
+        body{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1d2a35;
+            color: #f1f1f1;
+
+        }
+       
+        textarea.campoTexto{
+            background-color:whitesmoke;
+            border: 0;
+            width: 50%;
+            margin: 10px;
+            border-radius: 3px;
+            justify-content: space-between;
+            resize: none;
+
+
+        }
+        textarea.campoTexto:hover{
+            background-color:#EAECEE;
+            border: 10;
+
+        }
+
+        .procesar{
+            border-radius: 3px;
+            background-color: #04AA6D;
+            color: #f1f1f1;
+            border: 0;
+            height: 35px;
+            width: 80px;
+        }
+        .procesar:hover{
+            background-color: #088f5d;
+        }
+        .resultados{
+            display: none;
+            margin: 10px;
+        }
+
+        .tituloTabla{
+            margin-bottom: 5px;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Contador de caracteres</h2>
+        <p>Introduzca un texto para averiguar la cantidad de veces que aparece cada caracter</p>
+    </div>
+    <div class="texto">
+        <textarea class="campoTexto" name="entrada" id="campoTexto" cols="20" rows="15" placeholder="Introduzca el texto" required></textarea>
+        <br>
+        <input id="procesar" class="procesar" type="button" value="Procesar">
+    </div>
+
+    <div id="resultados" class="resultados">
+        <table id="tablaResultados" border="0" align="center">
+            <h4 class="tituloTabla">Resultados</h4>
+        </table>
+    </div>
+
+
+
+    <script src="Contador.js"></script>
+
+</body>
+
+</html>
