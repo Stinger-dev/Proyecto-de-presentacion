@@ -4,44 +4,47 @@ const listaPendientes = document.getElementById("listaPendientes");
 const listaTerminadas = document.getElementById("listaTerminadas");
 
 
-
 botonAgnadir.addEventListener("click", ()=>{
 
-    if(document.getElementById(campoTexto.value) == null && campoTexto.value !== "" ){
-        new Tarea(campoTexto.value);
-        
+    if(campoTexto.value !== "" ){ //asi compruebo si existe o no la tarea en todo el documento :)
+         if(document.getElementById(campoTexto.value) == null){
+            listaTareas.push(new Tarea(campoTexto.value, false)); 
+         }else{
+            alert("Ya existe esa tarea")
+         }
     }
 })
 
 
-
-
-
+let listaTareas=[];
 
 class Tarea{
     texto;
     resuelta;
-    etiqueta;
 
-    constructor(texto){
+    constructor(texto, resuelta){
         this.texto = texto;
-        this.agnadirTarea(this.texto);
-        this.agnadirResuelta(this.texto);
-        this.etiqueta = document.getElementById(this.texto);
-        this.etiqueta.addEventListener("click", ()=>{
-            this.etiqueta.checked = false;
+        this.resuelta = resuelta;
+        this.resuelta? this.agnadirResuelta(this.texto) : this.agnadirTarea(this.texto);
+
+        document.getElementById(this.texto).addEventListener("click", ()=>{
+            this.borrarHtml(this.texto, this.resuelta)
+
         })
     }
 
     agnadirTarea(texto){
-        listaPendientes.insertAdjacentHTML('beforeend',`<li><input type="checkbox" class="tarea"  " id="${texto}">${texto}</li>`);
+        listaPendientes.insertAdjacentHTML('beforeend',`<li id="${texto}"><input type="checkbox" class="tarea" >${texto}</li>`);
     }
 
     agnadirResuelta(texto){
-        listaTerminadas.insertAdjacentHTML('beforeend',`<li><input type="checkbox" class="tarea" checked = true " id="${texto}">${texto}</li>`);
+        listaTerminadas.insertAdjacentHTML('beforeend',`<li id="${texto}"><input type="checkbox" class="tarea" checked = true " >${texto}</li>`);
     }
 
-
+    borrarHtml(texto,resuelta){
+        resuelta ?  listaTerminadas.removeChild(document.getElementById(texto)) :  listaPendientes.removeChild(document.getElementById(texto));
+        
+        listaTareas.push(new Tarea(texto,!resuelta));
+        listaTareas = listaTareas.filter(entrada => entrada.texto !== this.texto && entrada.resuelta == this.resuelta);
+    }
 }
-
-
