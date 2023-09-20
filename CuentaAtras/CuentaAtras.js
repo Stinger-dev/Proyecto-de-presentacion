@@ -33,6 +33,9 @@ masMinutos.addEventListener("click",()=>{
 masSegundos.addEventListener("click",()=>{
     sumarSegundo();
 })
+
+
+
     
 const sumarHora = () =>{
     if (marcadorHoras.textContent<99) {
@@ -95,6 +98,7 @@ const restarSegundo =() => {
 }
 
 
+
 //Funciones para la cuenta atras y botones
 let crono;
 
@@ -115,9 +119,10 @@ const empezar = ()=>{
         crono = setInterval(() =>{cuentaAtras();},1000);
         botonEmpezar.classList.add("oculto")
         botonParar.classList.remove("oculto");
-        audio.pause();         
+        audio.pause();  //para evitar que se solapen       
         audio.currentTime = 0;
     }
+
 }
 const parar = ()=>{
     clearInterval(crono);
@@ -144,5 +149,3 @@ const cuentaAtras = () =>{
         }
     }
 }
-
-

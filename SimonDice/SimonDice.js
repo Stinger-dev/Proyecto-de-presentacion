@@ -61,6 +61,7 @@ botonEmpezar.addEventListener("click",()=>{
     reproducir();
 })
 
+
 //Eventos de botones de juego
 let aciertos = 0;
 verde.addEventListener("click" ,()=>{
@@ -85,6 +86,7 @@ azul.addEventListener("click" ,()=>{
 })
 
 const agnadirColor = () =>{
+    //añado un color aleatorio a la lista
     orden.push(Math.floor(Math.random() * 4) + 1);
     aciertos = 0;
     respuesta=[];
@@ -92,7 +94,7 @@ const agnadirColor = () =>{
 }
 
 const reproducir = () =>{
-        
+    // con un for(i) en lugar de un for each puedo usar el indice para la multiplicacion del tiempo
     for (let index = 0; index < orden.length; index++) {
         switch (orden[index]) {
             case 1:
@@ -119,9 +121,11 @@ const reproducir = () =>{
 }
 
 const pulsarcolor = (boton, tiempo) =>{
+
+
     setTimeout(() => {boton.classList.add("marcado"); }, dificultad*tiempo);
     
-    setTimeout(() => {boton.classList.remove("marcado"); }, dificultad*tiempo+dificultad-100);
+    setTimeout(() => {boton.classList.remove("marcado");}, dificultad*tiempo+dificultad-100);
     /*
      Esto es un poco idea feliz, pero es la unica forma que se me ha ocurrido para poder hacer el delay de los colores sin que 
      explote el navegador
@@ -132,6 +136,7 @@ const pulsarcolor = (boton, tiempo) =>{
 
 
 const comprobar = (pos) =>{
+    // Comprobamos si el color coincide con el que deberia, en caso de que coincida, añadimos un color y reproducimos la secuencia
 
     if(respuesta[pos] === orden[pos]){
         if(pos+1 === orden.length){

@@ -60,6 +60,12 @@
         .oculto{
             display: none;
         }
+        table.centrado{
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;;
+        }
+
 
 
     </style>
@@ -69,7 +75,7 @@
     <div >
         <h2>Simón dice</h2>
         <div id="SimonDice" class="SimonDice oculto">
-            <table class="botones" align="center">
+            <table class="botones centrado" >
                 <tr>
                     <td>
                         <input class="boton" id="Verde" type="button">
@@ -97,7 +103,7 @@
 
         <div id="SelectorDificultad">
             <h3>Seleccione la dificultad</h3>
-            <table border="0" align="center" >
+            <table class="centrado" >
                 <tr>
                     <input class="botonInterfaz" id="facil" type="button" value="Facil">
                     <input class="botonInterfaz" id="medio" type="button" value="Medio">
