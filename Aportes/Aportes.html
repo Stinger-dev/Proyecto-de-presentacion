@@ -11,7 +11,6 @@
             font-family: 'Courier New', Courier, monospace;
             background-color: #1d2a35;
             color: #f1f1f1;
-
         }
     
         .enviar{
@@ -24,6 +23,12 @@
         }
         .enviar:hover{
             background-color: #088f5d;
+        }
+        input, textarea{
+            margin: 10px;
+            border-radius: 3px;
+            resize: none;
+            
         }
         
     </style>
@@ -39,7 +44,7 @@
         <input type="radio" id="sugerencia" name="tipo" onclick="declararTipo('Sugerencia')"> Sugerencia
         <input type="radio" id="otro" name="tipo" onclick="declararTipo('Otro')"checked = true> Otro
         <br>
-        <input type="nombre"  id="nombre" placeholder="NOMBRE"> <input id="apellidos" type="apellidos" placeholder="APELLIDOS">
+        <input type="nombre"  id="nombre" placeholder="NOMBRE" autocomplete="off"> <input id="apellidos" type="apellidos" placeholder="APELLIDOS" autocomplete="off">
         <br> 
         <textarea name="cuerpo" id="cuerpo" cols="100" rows="15" placeholder="Escriba aqui el mensaje"></textarea>
         <br>
