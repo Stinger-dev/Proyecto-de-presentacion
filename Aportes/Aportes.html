@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contador</title>
+
+    <style type="text/css">
+        body{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1d2a35;
+            color: #f1f1f1;
+
+        }
+    
+        .enviar{
+            border-radius: 3px;
+            background-color: #04AA6D;
+            color: #f1f1f1;
+            border: 0;
+            height: 35px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .enviar:hover{
+            background-color: #088f5d;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Aportes</h2>
+        <p>Si tienes alguna idea que deberia implementar, descubres algun bug o se te ocurre alguna corrección, no dudes en escribirme</p>
+
+        <input type="radio" id="bug" name="tipo" onclick="declararTipo('Bug')" > Bug
+        <input type="radio" id="correccion" name="tipo" onclick="declararTipo('Correccion')"> Correccion
+        <input type="radio" id="sugerencia" name="tipo" onclick="declararTipo('Sugerencia')"> Sugerencia
+        <input type="radio" id="otro" name="tipo" onclick="declararTipo('Otro')"checked = true> Otro
+        <br>
+        <input type="nombre"  id="nombre" placeholder="NOMBRE"> <input id="apellidos" type="apellidos" placeholder="APELLIDOS">
+        <br> 
+        <textarea name="cuerpo" id="cuerpo" cols="100" rows="15" placeholder="Escriba aqui el mensaje"></textarea>
+        <br>
+ 
+        <input type="button"   class="enviar" id="emailAporte"  value="Enviar aporte" onclick="enviarAporte()">
+    </div>
+
+
+
+    <script src="Aportes.js"></script>
+
+</body>
+
+</html>
