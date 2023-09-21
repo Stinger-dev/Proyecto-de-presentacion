@@ -7,6 +7,7 @@
     <style type="text/css">       
         body{
             font-family: 'Courier New', Courier, monospace;
+            font-size: larger;
             margin: 0px;
             height: 100vh;
             background-color: rgb(21,32,43);
@@ -16,13 +17,14 @@
             text-decoration: none;
             color: #f1f1f1;
             margin-inline: 20px;
+            font-weight: 1000;
+
         }
 
-        a:hover{
+        a:hover,a.seleccionado{
             text-decoration: none;
             color: #04AA6D;
-            
-            font-weight: 1000;
+
         }
 
         .main{
@@ -33,15 +35,17 @@
             height: 100%;
             border: 0;
         }
-        td:hover{
+        td:hover, td.seleccionado{
             background-color: #1f2230;
         }
+ 
+
         table.centrado{
             margin-left: auto;
             margin-right: auto;  
             /* Pasar a css externo */
         }
-  
+
         
 
     </style>
@@ -54,28 +58,30 @@
         <table  class="centrado" >
             <tr>
                 <td>
-                    <a href="ContadorPalabras/Contador.html" target="principal">Contador de caracteres</a>
+                    <a id="contador" href="ContadorPalabras/Contador.html" onclick="marcado('contador')" target="principal">Contador de caracteres</a>
 
                 </td>
                 <td>
-                    <a href="CuentaAtras/CuentaAtras.html" target="principal">Cuenta atrás</a>
+                    <a id="cuentaAtras" href="CuentaAtras/CuentaAtras.html" onclick="marcado('cuentaAtras')" target="principal">Cuenta atrás</a>
 
                 </td>
                 <td>
-                    <a href="GeneradorCuestionarios/generador.html" target="principal">FlashCards</a>
+                    <a id="generador" href="GeneradorCuestionarios/generador.html" onclick="marcado('generador')"  target="principal">FlashCards</a>
 
                 </td>
                 <td>
-                    <a href="SimonDice/SimonDice.html" target="principal">Simón dice</a>
+                    <a id="simonDice" href="SimonDice/SimonDice.html" onclick="marcado('simonDice')" target="principal">Simón dice</a>
 
                 </td>
                 <td>
-                    <a href="ToDo/ToDo.html" target="principal">ToDo Lista</a>
+                    <a id="todo" href="ToDo/ToDo.html" onclick="marcado('todo')" target="principal">ToDo</a>
 
                 </td>
             </tr>
         </table>
     </div>
+
+    <script src="menu.js"></script>
    
 </body>
 

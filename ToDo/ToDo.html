@@ -30,7 +30,7 @@
             margin-right: auto;
             text-align: left;
             width: 90%;
-            height: 90%;
+            height: 89%;
             margin-top: 1vh;
             table-layout: fixed;
         }
@@ -39,12 +39,42 @@
             vertical-align: top;
         }
         div{
-            overflow: auto;
+            overflow-y: auto;
             height: 100%;
+            background-color: rgb(207, 195, 178);
+            border-radius: 5px;
+            color: black;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
-        .tarea{
-            margin-top: 1vh;
+
+        #campoTexto{
+            min-height: 20px;
+            height: 5vh;
+            width: 15vw;
+            min-width: 150px;
+            border-radius: 3px;
+            border: 0;
+
+        }
+        #agnadir{
+            height: 35px;
+            width: 90px;
+            background-color: #04AA6D;
+            border-radius: 3px;
+            color: #f1f1f1;
+            border: 0;
+            margin: 10px;
+        }
+        #listaPendientes, #listaTerminadas{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        li.resuelta{
+            text-decoration-line: line-through;
+            color: rgb(65, 65, 65);
+
         }
 
 
@@ -53,7 +83,7 @@
 
 <body>
 
-    <input  id="campoTexto" type="text" placeholder="ToDo" autocomplete="off"> <input id="agnadir"  type="button" value="Añadir" >
+    <input  id="campoTexto" type="text" placeholder="ToDo" autocomplete="off"> <input id="agnadir"  type="button" value="Añadir tarea" >
     
     <table>
         <tr>
@@ -61,6 +91,7 @@
                 <div>
                     <ul id="listaPendientes">
                        <!-- Aqui aparecen los nuevos elementos -->
+                       
                     </ul>
 
                 </div>
@@ -70,6 +101,7 @@
                 <div>
                     <ul id="listaTerminadas">
                         <!-- Aqui aparecen los nuevos elementos -->
+                 
 
                     </ul>
                 </div>
