@@ -1,4 +1,4 @@
-const campoTexto = document.getElementById("campoTexto");
+const campoTexto = document.getElementById("campoTextoTodo");
 const botonAgnadir = document.getElementById("agnadir");
 const listaPendientes = document.getElementById("listaPendientes");
 const listaTerminadas = document.getElementById("listaTerminadas");

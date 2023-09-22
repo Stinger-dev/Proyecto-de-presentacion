@@ -4,71 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Simón Dice</title>
-
-    <style type="text/css">
-        body{
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #1d2a35;
-            color: whitesmoke;
-        }
-        
-        .boton{
-            height: 200px;
-            width: 200px;
-            border-radius: 20px;
-            border-width: 5px; 
-            border-style: solid;   
-        }     
-
-        .boton:active, .marcado{
-            border-width: 15px;
-            background: radial-gradient(circle, rgba(129,129,129,1) 0%, rgba(0,0,0,0) 100%);
-            background-blend-mode: lighten; 
-        }
- 
-        .botonInterfaz{
-            border-radius: 3px;
-            background-color: #04AA6D;
-            color: #f1f1f1;
-            border: 0;
-            height: 35px;
-            width: 80px;
-            margin: 10px;
-        }
-
-        .botonInterfaz:hover{
-            background-color: #088f5d;
-        }
-
-        #Verde{
-            background-color: green;
-        }
-
-        #Rojo{
-            background-color: red;
-        }
-
-        #Morado{
-            background-color: purple;
-        }
-
-        #Azul{
-            background-color: blue;
-        }
-
-        .oculto{
-            display: none;
-        }
-        table.centrado{
-            margin-left: auto;
-            margin-right: auto;
-            border: 0;;
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../hojaEstilos.css">
 </head>
 
 <body>
@@ -96,19 +32,17 @@
                     </td>
                 </tr>
             </table>
-            <input class="botonInterfaz oculto" id="reiniciar" type="button" value="Reiniciar">
-            <input class="botonInterfaz" id="comenzar" type="button" value="Comenzar">
+            <input class="botonGeneral oculto" id="reiniciar" type="button" value="Reiniciar">
+            <input class="botonGeneral" id="comenzar" type="button" value="Comenzar">
 
         </div>
 
         <div id="SelectorDificultad">
             <h3>Seleccione la dificultad</h3>
-            <table class="centrado" >
-                <tr>
-                    <input class="botonInterfaz" id="facil" type="button" value="Facil">
-                    <input class="botonInterfaz" id="medio" type="button" value="Medio">
-                    <input class="botonInterfaz" id="dificil" type="button" value="Dificil">
-                </tr>
+            <table class="centrado selectorDificultad" >
+                    <input class="botonGeneral selectorDificultad" id="facil" type="button" value="Facil">
+                    <input class="botonGeneral selectorDificultad" id="medio" type="button" value="Medio">
+                    <input class="botonGeneral selectorDificultad" id="dificil" type="button" value="Dificil">
             </table>
         </div>
     </div>

@@ -4,81 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicial</title>
-    <style type="text/css">       
-        body{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: larger;
-            margin: 0px;
-            height: 100vh;
-            background-color: rgb(21,32,43);
-        }
-
-        a{
-            text-decoration: none;
-            color: #f1f1f1;
-            margin-inline: 20px;
-            font-weight: 1000;
-
-        }
-
-        a:hover,a.seleccionado{
-            text-decoration: none;
-            color: #04AA6D;
-
-        }
-
-        .main{
-            height: 100%;
-        }
-
-        table{
-            height: 100%;
-            border: 0;
-        }
-        td:hover, td.seleccionado{
-            background-color: #1f2230;
-        }
- 
-
-        table.centrado{
-            margin-left: auto;
-            margin-right: auto;  
-            /* Pasar a css externo */
-        }
-
-        
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="hojaEstilos.css">
 
 </head>
 
-<body>
+<body class="menu">
     <div class="main">  
         
         <table  class="centrado" >
             <tr>
-                <td>
-                    <a id="contador" href="ContadorPalabras/Contador.html"  class="seleccionado" onclick="marcado('contador')" target="principal">Contador de caracteres</a>
+                <td class="menu seleccionado">
+                    <a id="contador" href="ContadorPalabras/Contador.html"  class="seleccionado menu" onclick="marcado('contador')" target="principal">Contador de caracteres</a>
 
                 </td>
-                <td>
-                    <a id="cuentaAtras" href="CuentaAtras/CuentaAtras.html" onclick="marcado('cuentaAtras')" target="principal">Cuenta atrás</a>
+                <td class="menu">
+                    <a id="cuentaAtras" href="CuentaAtras/CuentaAtras.html" class="menu" onclick="marcado('cuentaAtras')" target="principal">Cuenta atrás</a>
 
-                </td>
+                </td >
                 <!-- <td>
                     <a id="generador" href="GeneradorCuestionarios/generador.html" onclick="marcado('generador')"  target="principal">FlashCards</a>
 
                 </td> -->
-                <td>
-                    <a id="simonDice" href="SimonDice/SimonDice.html" onclick="marcado('simonDice')" target="principal">Simón dice</a>
+                <td class="menu">
+                    <a id="simonDice" href="SimonDice/SimonDice.html" class="menu" onclick="marcado('simonDice')" target="principal">Simón dice</a>
 
                 </td>
-                <td>
-                    <a id="todo" href="ToDo/ToDo.html" onclick="marcado('todo')" target="principal">ToDo</a>
+                <td class="menu">
+                    <a id="todo" href="ToDo/ToDo.html" class="menu" onclick="marcado('todo')" target="principal">ToDo</a>
                 </td>
 
-                <td>
-                    <a id="aportes" href="Aportes/Aportes.html" onclick="marcado('aportes')" target="principal">Aportes</a>
+                <td class="menu">
+                    <a id="aportes" href="Aportes/Aportes.html" class="menu" onclick="marcado('aportes')" target="principal">Aportes</a>
                 </td>
             </tr>
         </table>
