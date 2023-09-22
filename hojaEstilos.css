@@ -118,7 +118,7 @@ table.dialTiempo{
 
 .numeros {
     color: #B1B6B5;
-    font-size: 12dvw;
+    font-size: 11dvw;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -188,4 +188,11 @@ div.todo{
     color: black;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+input.aporte, textarea.aporte{
+    margin: 10px;
+    border-radius: 3px;
+    resize: none;
+    
 }
